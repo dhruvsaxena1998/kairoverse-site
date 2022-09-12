@@ -1,14 +1,32 @@
 ---
-import Header from "../components/Head.astro";
+import DefaultLayout from "../layouts/default-layout.astro";
+
+import Head from "../components/Head.astro";
 ---
 
 <html lang="en">
   <head>
-    <Header title="Not Found" />
+    <Head />
   </head>
   <body>
-    <div class="text-center p-4">
-      <h1 class="text-lg md:text-3xl lg:text-5xl">Page Not Found</h1>
-    </div>
+    <DefaultLayout>
+      <header class="relative overflow-hidden h-[38rem]">
+        <img
+          class="h-auto w-full"
+          src="https://images.unsplash.com/photo-1644907149128-ae093319a190?w=1200&q=75"
+          srcset="https://images.unsplash.com/photo-1644907149128-ae093319a190?w=1200&q=75 800w,https://images.unsplash.com/photo-1644907149128-ae093319a190?w=1200&q=75 1200w,https://images.unsplash.com/photo-1644907149128-ae093319a190?w=1600&q=75 1600w,https://images.unsplash.com/photo-1644907149128-ae093319a190?w=2400&q=75 2400w"
+          sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (max-width: 2400px) 2400px, 1200px"
+        />
+        <div
+          class="absolute z-10 flex flex-col top-0 left-0 h-full items-start justify-center pl-8"
+        >
+          <h1 class="text-lg md:text-2xl lg:text-5xl font-bold mb-2 text-white">
+            Page not found
+          </h1>
+        </div>
+      </header>
+      <main class="my-4">
+      </main>
+    </DefaultLayout>
   </body>
 </html>
