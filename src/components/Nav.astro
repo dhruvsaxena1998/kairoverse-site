@@ -1,0 +1,36 @@
+---
+import LinkedinIcon from "../assets/icons/linkedin.astro";
+import GithubIcon from "../assets/icons/github.astro";
+---
+
+<nav class="flex gap-4 justify-between items-center p-4">
+  <!-- Menu -->
+  <div class="flex gap-4 items-center">
+    <a class="link" href="/">
+      <span class="monogram">Kairoverse</span>
+    </a>
+    <a class="link" href="/projects/"> Portfolio</a>
+    <a class="link" href="/about/"> About</a>
+  </div>
+  <!-- Socials -->
+  <div class="gap-4 hidden md:flex">
+    <a href="https://linkedin.com/in/dhruvsaxena1998">
+      <LinkedinIcon />
+    </a>
+    <a href="https://github.com/kairoverse">
+      <GithubIcon />
+    </a>
+  </div>
+</nav>
+
+<style>
+  .link {
+    @apply text-gray-600 font-bold no-underline uppercase py-3 hover:text-blue-500 text-base;
+  }
+
+  .monogram {
+    @apply flex p-2 items-center justify-center font-bold rounded-full border-4
+    hover:border-blue-500 hover:opacity-75
+    text-lg;
+  }
+</style>
