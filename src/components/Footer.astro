@@ -1,12 +1,17 @@
 ---
-const currentYear = new Date().getFullYear();
+import ContactUsFormComponent from "../components/preact/ContactUsForm";
 ---
 
-<footer class="text-center px-2 py-4">
-  <span class="footer-text">&copy; {currentYear} Kairoverse</span>
-  <small class="mt-2 footer-text block">
-    Built with <span class="text-red-500">❤</span> by Kairoverse
-  </small>
+<footer class="text-center">
+  <hr class="my-4" />
+
+  <ContactUsFormComponent />
+
+  <div class="my-2">
+    <small class="mt-2 footer-text block">
+      Built with <span class="text-red-500">❤</span> by Kairoverse
+    </small>
+  </div>
 </footer>
 
 <style>
