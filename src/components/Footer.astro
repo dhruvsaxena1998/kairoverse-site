@@ -1,11 +1,10 @@
 ---
 import ContactUsFormComponent from "../components/preact/ContactUsForm";
-
-const props = Astro.props;
 ---
 
-<footer class:list={["my-4", props.showButton ? "text-center" : "text-center md:text-left px-8"]}>
-  {props.showButton && <ContactUsFormComponent />}
+<footer class:list={["my-4", "text-center"]}>
+  <hr class="my-4"/>
+  <ContactUsFormComponent />
   <div>
     <small class="mt-4 footer-text block">
       Built with <span class="text-red-500">❤</span> by Kairoverse

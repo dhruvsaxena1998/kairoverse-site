@@ -5,4 +5,11 @@ module.exports = {
     extend: {},
   },
   plugins: [require("@tailwindcss/typography")],
+  typography: (theme) => ({
+    DEFAULT: {
+      css: {
+        color: theme("colors.grey.700"),
+      },
+    },
+  }),
 };

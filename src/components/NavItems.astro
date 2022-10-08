@@ -2,7 +2,8 @@
 const { classlist } = Astro.props;
 const menu_items = [
   { slug: "portfolio", label: "Portfolio" },
-  { slug: "/blog/journey", label: "About" },
+  { slug: "about", label: "About" },
+  { slug: "/blog/journey", label: "Blog" },
   { slug: "contact", label: "Contact US" },
 ];
 ---
@@ -11,7 +12,7 @@ const menu_items = [
   {
     menu_items.map((item) => (
       <li
-        class:list={["uppercase font-medium", classlist]}
+        class:list={["capitalize font-medium", classlist]}
       >
         <a href={item.slug}>{item.label}</a>
       </li>
