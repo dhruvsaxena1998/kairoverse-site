@@ -1,0 +1,20 @@
+---
+const { classlist } = Astro.props;
+const menu_items = [
+  { slug: "portfolio", label: "Portfolio" },
+  { slug: "/blog/journey", label: "About" },
+  { slug: "contact", label: "Contact US" },
+];
+---
+
+<ul class="flex gap-4">
+  {
+    menu_items.map((item) => (
+      <li
+        class:list={["uppercase font-medium", classlist]}
+      >
+        <a href={item.slug}>{item.label}</a>
+      </li>
+    ))
+  }
+</ul>

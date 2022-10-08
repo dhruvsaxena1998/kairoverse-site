@@ -1,35 +1,23 @@
 ---
-import LinkedinIcon from "../assets/icons/linkedin.astro";
-import GithubIcon from "../assets/icons/github.astro";
+import Logo from "./icons/kairoverse-logo.astro";
+import NavItems from "./NavItems.astro";
 ---
 
-<nav class="flex gap-4 justify-between items-center px-2">
-  <!-- Menu -->
-  <section class="flex gap-4 items-center justify-between">
-    <a class="link" href="/">
-      <span class="logo">Kairoverse</span>
+<nav class="py-4">
+  <section class="flex px-2 sm:px-4 justify-between items-center">
+    <a href="/">
+      <Logo class="h-14" color="fill-indigo-500" wingsColor="fill-indigo-400" />
     </a>
-    <a class="link" href="/projects/"> Portfolio</a>
-    <a class="link" href="/about/"> About</a>
+    <!-- HIDDEN ON MOBILE DISPLAY -->
+    <div class="hidden sm:block">
+      <NavItems
+        classlist="text-indigo-500 hover:text-blue-500"
+      />
+    </div>
   </section>
-  <!-- Socials -->
-  <section class="hidden sm:flex gap-4">
-    <a href="https://linkedin.com/in/dhruvsaxena1998">
-      <LinkedinIcon />
-    </a>
-    <a href="https://github.com/kairoverse">
-      <GithubIcon />
-    </a>
+
+  <!-- HIDDEN ON DESKTOP DISPLAY -->
+  <section class="sm:hidden my-2 p-2 bg-indigo-500">
+    <NavItems classlist="text-slate-100" />
   </section>
 </nav>
-
-<style>
-  .link {
-    @apply text-gray-600 font-bold no-underline uppercase
-    hover:text-blue-500 text-base;
-  }
-
-  .logo {
-    @apply text-2xl;
-  }
-</style>

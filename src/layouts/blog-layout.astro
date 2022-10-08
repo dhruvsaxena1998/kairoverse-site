@@ -1,0 +1,12 @@
+---
+import Nav from "../components/Nav.astro";
+const { frontmatter, url } = Astro.props;
+---
+
+<div class="mx-auto max-w-6xl">
+  <Nav />
+  <div class="mx-auto px-4 prose prose-gray prose-xl">
+    <img src={frontmatter.cover} />
+    <slot />
+  </div>
+</div>
