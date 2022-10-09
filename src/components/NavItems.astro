@@ -2,19 +2,18 @@
 const { classlist } = Astro.props;
 const menu_items = [
   { slug: "portfolio", label: "Portfolio" },
-  { slug: "about", label: "About" },
-  { slug: "/blog/journey", label: "Blog" },
+  { slug: "about", label: "About Us" },
+  { slug: "blog/journey", label: "Blog" },
   { slug: "contact", label: "Contact US" },
 ];
+// const url = Astro.url.origin;
 ---
 
-<ul class="flex gap-4">
+<ul class="flex gap-8">
   {
     menu_items.map((item) => (
-      <li
-        class:list={["capitalize font-medium", classlist]}
-      >
-        <a href={item.slug}>{item.label}</a>
+      <li class:list={["capitalize font-medium", classlist]}>
+        <a href={`/${item.slug}`}>{item.label}</a>
       </li>
     ))
   }

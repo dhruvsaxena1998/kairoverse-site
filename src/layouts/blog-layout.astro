@@ -7,31 +7,38 @@ import Analytics from "../components/Analytics.astro";
 const { frontmatter: props, url } = Astro.props;
 ---
 
-<Head title={props.title} description={props.excerpt}/>
+<html lang="en">
+  <head>
+    <Head title={props.title} description={props.excerpt} />
+  </head>
+  <body>
+    <div class="mx-auto max-w-6xl">
+      <Nav />
+      <div class="mx-auto p-4 mb-8">
+        <a class="font-mono text-gray-500">blog / {props.slug}</a>
 
-<div class="mx-auto max-w-6xl">
-  <Nav />
-  <div class="mx-auto p-4 mb-8">
-    <a class="font-mono text-gray-500">blog / {props.slug}</a>
+        <!-- TITLE -->
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 py-4"
+        >
+          <span class="block xl:inline">{props.title}</span>
+        </h1>
 
-    <!-- TITLE -->
-    <h1
-      class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 py-4"
-    >
-      <span class="block xl:inline">{props.title}</span>
-    </h1>
+        <!-- EXCERPT -->
+        <p class="text-xl py-2">{props.excerpt}</p>
+        
+        <!-- COVER -->
+        <Image src={props.cover} class="max-h-[600px] w-full py-4" />
 
-    <!-- COVER -->
-    <p class="text-xl py-2">{props.excerpt}</p>
-
-    <Image src={props.cover} class="max-h-[600px] w-full py-4" />
-
-    <div class="mx-auto prose prose-xl">
-      <strong class="text-lg">{props.published_at}</strong>
-      <slot />
+        <!-- CONTENT -->
+        <div class="mx-auto prose prose-xl">
+          <strong class="text-lg">{props.published_at}</strong>
+          <slot />
+        </div>
+      </div>
+      <Footer />
     </div>
-  </div>
-  <Footer />
-</div>
 
-<Analytics />
+    <Analytics />
+  </body>
+</html>
