@@ -3,6 +3,7 @@ import Head from "../components/Head.astro";
 import Nav from "../components/Nav.astro";
 import Image from "../components/Image.astro";
 import Footer from "../components/Footer.astro";
+import Analytics from "../components/Analytics.astro";
 const { frontmatter: props, url } = Astro.props;
 ---
 
@@ -32,3 +33,5 @@ const { frontmatter: props, url } = Astro.props;
   </div>
   <Footer />
 </div>
+
+<Analytics />
