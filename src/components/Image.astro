@@ -1,0 +1,8 @@
+---
+import {weserv} from '../utils/images'
+const { class: classname = "", src, alt } = Astro.props;
+
+const source = weserv(src)
+---
+
+<img src={source} alt={alt} class:list={[classname]} />
