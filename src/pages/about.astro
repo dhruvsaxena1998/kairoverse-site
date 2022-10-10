@@ -4,17 +4,15 @@ import Head from "../components/Head.astro";
 import Image from "../components/Image.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
-import AboutUSContent from './about/content.mdx';
 
-const cover = 'https://images.unsplash.com/photo-1455849318743-b2233052fcff'
+import AboutUSContent from "../components/mdx/about.mdx";
+
+const cover = "https://images.unsplash.com/photo-1455849318743-b2233052fcff";
 ---
 
 <html lang="en">
   <head>
-    <Head
-      title="About - Kairoverse"
-      description="Web-development, Application Development, Web designing, Android, IOS development and other IT consultations."
-    />
+    <Head title="About - Kairoverse" cover={cover} />
   </head>
   <body>
     <div class="mx-auto max-w-6xl">
