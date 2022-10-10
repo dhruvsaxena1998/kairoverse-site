@@ -5,6 +5,12 @@ import Image from "../components/Image.astro";
 import Footer from "../components/Footer.astro";
 import Analytics from "../components/Analytics.astro";
 const { frontmatter: props, url } = Astro.props;
+
+
+Astro.response.headers.set(
+  "Cache-Control",
+  "public, max-age=600, s-maxage=600, stale-while-revalidate=600"
+);
 ---
 
 <html lang="en">
