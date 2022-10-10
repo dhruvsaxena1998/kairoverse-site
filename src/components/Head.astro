@@ -1,10 +1,13 @@
 ---
 import "../styles/global.css";
+import { weserv } from "../utils/images";
 const {
   title = "Kairoverse Technologies - Grab the opportunity to enrich your online business",
   description = `Web-development, Application Development, Web designing, Android, IOS development, consultations. MERN | MEVN | MEAN | JavaScript | Android | IOS | Consultation | Devops`,
-  cover = "/assets/og-image.png",
+  cover = "https://www.kairoverse.com/assets/og-image.png",
 } = Astro.props;
+
+const ogimage = weserv(cover, { height: 612, width: 612, quality: 60, output: 'webp' });
 ---
 
 <meta charset="UTF-8" />
@@ -28,11 +31,11 @@ const {
 <meta property="og:url" content="https://www.kairoverse.com/" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={cover} />
+<meta property="og:image" content={ogimage} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content="https://www.kairoverse.com/" />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={cover} />
+<meta property="twitter:image" content={ogimage} />
