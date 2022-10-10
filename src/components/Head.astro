@@ -7,7 +7,7 @@ const {
   cover = "https://www.kairoverse.com/assets/og-image.png",
 } = Astro.props;
 
-const ogimage = weserv(cover, { height: 612, width: 612, quality: 60, output: 'webp' });
+const ogimage = weserv(cover, { quality: 60, output: 'webp' });
 ---
 
 <meta charset="UTF-8" />
