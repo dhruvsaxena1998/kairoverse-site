@@ -7,10 +7,9 @@ import Analytics from "../components/Analytics.astro";
 const { frontmatter: props, url } = Astro.props;
 
 
-Astro.response.headers.set(
-  "Cache-Control",
-  "public, max-age=600, s-maxage=600, stale-while-revalidate=600"
-);
+import { cacheControl } from "../utils/cache";
+const [key, value] = cacheControl();
+Astro.response.headers.set(key, value);
 ---
 
 <html lang="en">
