@@ -14,7 +14,7 @@ Astro.response.headers.set(key, value);
 
 <html lang="en">
   <head>
-    <Head title={props.title} description={props.excerpt} />
+    <Head title={props.title} description={props.excerpt || undefined} />
   </head>
   <body>
     <div class="mx-auto max-w-6xl">
@@ -30,7 +30,9 @@ Astro.response.headers.set(key, value);
         </h1>
 
         <!-- EXCERPT -->
-        <p class="text-xl py-2">{props.excerpt}</p>
+        { props.excerpt && 
+          <p class="text-xl py-2">{props.excerpt}</p>
+        }
         
         <!-- COVER -->
         <Image src={props.cover} class="max-h-[600px] w-full py-4" />
