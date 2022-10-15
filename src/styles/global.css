@@ -25,6 +25,11 @@ body {
   box-sizing: content-box;
 }
 
-.debug {
-  @apply border-2 border-red-600;
+.hero-content {
+  @apply mt-10 md:mt-16 lg:mt-20 xl:mt-28
+  px-4 sm:px-6 lg:px-8;
+}
+
+.center-content {
+  @apply mx-auto max-w-6xl
 }

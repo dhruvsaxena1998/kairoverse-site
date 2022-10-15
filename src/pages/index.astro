@@ -7,11 +7,8 @@ import Waves from "../components/icons/waves.astro";
 <SiteLayout
   description="Web-development, Application Development, Web designing, Android, IOS development and other IT consultations. Service Provider"
 >
-  <section class="mx-auto max-w-6xl" slot="body">
-    <Nav />
-    <main
-      class="mx-auto max-w-7xl mt-10 md:mt-16 lg:mt-20 xl:mt-28 px-4 sm:px-6 lg:px-8"
-    >
+  <main slot="body">
+    <section class="center-content hero-content">
       <div class="sm:text-center lg:text-left">
         <h1
           class="text-4xl text-gray-900 font-bold tracking-tight sm:text-5xl md:text-6xl"
@@ -35,8 +32,7 @@ import Waves from "../components/icons/waves.astro";
           </a>
         </div>
       </div>
-    </main>
-  </section>
-
-  <Waves slot="body" />
+    </section>
+    <Waves slot="body" />
+  </main>
 </SiteLayout>
