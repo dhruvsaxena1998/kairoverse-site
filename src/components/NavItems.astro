@@ -1,10 +1,10 @@
 ---
 const { classlist } = Astro.props;
 const menu_items = [
-  { slug: "portfolio", label: "Portfolio" },
-  { slug: "about", label: "About Us" },
-  { slug: "blog/journey", label: "Blog" },
-  { slug: "contact", label: "Contact US" },
+  { slug: "/portfolio", label: "Portfolio" },
+  { slug: "/about", label: "About Us" },
+  { slug: "/blog/journey", label: "Blog" },
+  { slug: "mailto:contact@kairoverse.com", label: "Contact US" },
 ];
 // const url = Astro.url.origin;
 ---
@@ -13,7 +13,7 @@ const menu_items = [
   {
     menu_items.map((item) => (
       <li class:list={["capitalize font-medium", classlist]}>
-        <a href={`/${item.slug}`}>{item.label}</a>
+        <a href={item.slug}>{item.label}</a>
       </li>
     ))
   }
